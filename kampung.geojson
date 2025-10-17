@@ -1,0 +1,141 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Jalan Nurul Huda I",
+        "type": "residential",
+        "location": "Kampung Rancabentang Kebonkopi, Kelurahan Cibeureum, Kecamatan Cimahi Selatan, Kota Cimahi"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            107.55814725742478,
+            -6.907206654461448
+          ],
+          [
+            107.55790199960657,
+            -6.9075581634968835
+          ],
+          [
+            107.55827336378492,
+            -6.907807394276795
+          ],
+          [
+            107.55821125415218,
+            -6.907894237417031
+          ]
+        ],
+        "type": "LineString"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Jalan Kebon Kopi",
+        "type": "tertiary",
+        "location": "Kampung Rancabentang Kebonkopi, Kelurahan Cibeureum, Kecamatan Cimahi Selatan, Kota Cimahi"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            107.55843919352654,
+            -6.90657891102796
+          ],
+          [
+            107.55829001070546,
+            -6.906906633091705
+          ],
+          [
+            107.55814836444446,
+            -6.907204143518824
+          ]
+        ],
+        "type": "LineString"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Jalan Ranca Bentang",
+        "type": "residential",
+        "location": "Kampung Rancabentang Kebonkopi, Kelurahan Cibeureum, Kecamatan Cimahi Selatan, Kota Cimahi"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            107.56024427548769,
+            -6.906185466167229
+          ],
+          [
+            107.55993380911195,
+            -6.906078257975704
+          ],
+          [
+            107.55956062753572,
+            -6.906038374568469
+          ],
+          [
+            107.55887165201442,
+            -6.905684988346942
+          ],
+          [
+            107.55844196120104,
+            -6.906580268832673
+          ]
+        ],
+        "type": "LineString"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Jalan Kampung Rancabentang Utara",
+        "type": "residential",
+        "location": "Kampung Rancabentang Kebonkopi, Kelurahan Cibeureum, Kecamatan Cimahi Selatan, Kota Cimahi"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            107.56554169912586,
+            -6.905154078974949
+          ],
+          [
+            107.56441743900623,
+            -6.907340652829747
+          ],
+          [
+            107.5641556400266,
+            -6.907645454289991
+          ],
+          [
+            107.56359472720666,
+            -6.9080727271449955
+          ],
+          [
+            107.56322800422402,
+            -6.907858162053626
+          ],
+          [
+            107.56294961684978,
+            -6.907836194742142
+          ],
+          [
+            107.56249545830526,
+            -6.90759214257886
+          ],
+          [
+            107.56189748698725,
+            -6.907284637368388
+          ],
+          [
+            107.56023244155759,
+            -6.906196918392677
+          ]
+        ],
+        "type": "LineString"
+      }
+    }
+  ]
+}
