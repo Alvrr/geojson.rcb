@@ -2,9 +2,13 @@ package main
 
 import (
 	"context"
+	"encoding/json"
 	"fmt"
 	"inibackend/config"
+	"inibackend/model"
+	"inibackend/repository"
 	r "inibackend/router"
+	"io/ioutil"
 	"log"
 	"os"
 	"os/signal"
@@ -24,6 +28,35 @@ func init() {
 	}
 }
 
+func loadGeoJSONData() {
+	// Read the kampung.geojson file
+	data, err := ioutil.ReadFile("kampung.geojson")
+	if err != nil {
+		fmt.Printf("Failed to read kampung.geojson: %v\n", err)
+		return
+	}
+
+	// Parse the JSON data into FeatureCollection
+	var fc model.FeatureCollection
+	err = json.Unmarshal(data, &fc)
+	if err != nil {
+		fmt.Printf("Failed to parse GeoJSON: %v\n", err)
+		return
+	}
+
+	// Insert into database
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	id, err := repository.CreateFeatureCollection(ctx, fc)
+	if err != nil {
+		fmt.Printf("Failed to insert GeoJSON data into DB: %v\n", err)
+		return
+	}
+
+	fmt.Printf("Successfully loaded GeoJSON data from kampung.geojson into DB with ID: %v\n", id)
+}
+
 func main() {
 	defer func() {
 		if r := recover(); r != nil {
@@ -39,6 +72,8 @@ func main() {
 		fmt.Println("Continuing without DB connection...")
 	} else {
 		fmt.Println("DB connection successful on startup")
+		// Load GeoJSON data from kampung.geojson
+		loadGeoJSONData()
 	}
 	// Initialize the Fiber app
 	app := fiber.New()
